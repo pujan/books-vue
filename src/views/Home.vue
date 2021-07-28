@@ -14,8 +14,8 @@
 
 <script>
 import {onErrorCaptured, ref} from 'vue';
-import HomeComponent from '../components/HomeComponent';
-import AppLoader from '../components/AppLoader';
+import HomeComponent from '@/components/HomeComponent';
+import AppLoader from '@/components/AppLoader';
 
 export default {
     name: 'Home',
@@ -27,7 +27,6 @@ export default {
         const error = ref(null);
         onErrorCaptured(e => {
           error.value = e;
-          return true;
         });
 
         return {

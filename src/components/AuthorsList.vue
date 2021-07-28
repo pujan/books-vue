@@ -2,7 +2,7 @@
     <h1>Authors</h1>
     <AuthorComponent v-for="author in authors" :key="author.id">
       <div class="author">
-        <a :href="author.uri">{{author.firstname}} {{author.lastname}}</a>
+        <router-link :to="{name: 'author-details', params: {id: author.id}}">{{author.firstname}} {{author.lastname}}</router-link>
       </div>
     </AuthorComponent>
 </template>

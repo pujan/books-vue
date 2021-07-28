@@ -9,6 +9,7 @@
       :rating="book.rating"
       :url="book.uri"
       :authors="book.authors"
+      :id="book.id"
     />
 </template>
 

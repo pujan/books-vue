@@ -2,12 +2,13 @@
     <div class="books">
       <div class="book">
         <div class="title">
-          <a :href="url">{{title}}</a>
+          <!--<a :href="url">{{title}}</a>-->
+          <router-link :to="{name: 'book-details', params: {id: id}}">{{title}}</router-link>
         </div>
         <!-- in details: <div class="isbn">ISBN: {{isbn}}</div>
         <div class="pages">Pages: {{pages}}</div> -->
         <div class="rating">Rating: {{rating}} / 5</div>
-        <div class="authors">
+        <!--<div class="authors">
           <h4 class="h4c">Authors:</h4>
           <AuthorComponent v-for="author in authors"
             :key="author.id"
@@ -17,18 +18,18 @@
               {{author.firstname}} {{author.lastname}}
             </a>
           </span>
-
           </AuthorComponent>
-        </div>
+      </div>-->
       </div>
     </div>
 </template>
 
 <script>
-import AuthorComponent from "./AuthorComponent";
+// import AuthorComponent from "./AuthorComponent";
+
 export default {
   name: 'BookComponent',
-  components: {AuthorComponent},
+  // components: {AuthorComponent},
   props: {
     title: {
       type: String,
@@ -53,7 +54,12 @@ export default {
     url: {
       type: String,
       default: '#'
+    },
+    id: {
+        type: Number,
+        required: true
     }
+
   }
 }
 </script>

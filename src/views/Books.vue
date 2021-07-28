@@ -14,8 +14,8 @@
 
 <script>
 import {onErrorCaptured, ref} from 'vue';
-import BooksList from '../components/BooksList';
-import AppLoader from '../components/AppLoader';
+import BooksList from '@/components/BooksList';
+import AppLoader from '@/components/AppLoader';
 
 export default {
   name: 'Books',
@@ -27,7 +27,6 @@ export default {
       const error = ref(null);
       onErrorCaptured(e => {
         error.value = e;
-        return true;
       });
 
       return {
