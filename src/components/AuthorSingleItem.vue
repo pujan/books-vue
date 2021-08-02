@@ -2,9 +2,13 @@
     <div class="author-detail">
         <AuthorComponent>
             <span>
+                <div v-if="details.photo" class="author-photo">
+                    <img class="photo" src="{{details.photo}}" alt="photo" />
+                </div>
                 <p>First name: {{details.firstname}}</p>
                 <p>Last name: {{details.lastname}}</p>
                 <p>Biography: {{details.biography}}</p>
+                <p>Number books in database: {{details.number_books}}</p>
             </span>
         </AuthorComponent>
     </div>

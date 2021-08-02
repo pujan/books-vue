@@ -1,27 +1,13 @@
 <template>
-    <div class="books">
-      <div class="book">
-        <div class="title">
-          <!--<a :href="url">{{title}}</a>-->
-          <router-link :to="{name: 'book-details', params: {id: id}}">{{title}}</router-link>
-        </div>
-        <!-- in details: <div class="isbn">ISBN: {{isbn}}</div>
-        <div class="pages">Pages: {{pages}}</div> -->
-        <div class="rating">Rating: {{rating}} / 5</div>
-        <!--<div class="authors">
-          <h4 class="h4c">Authors:</h4>
-          <AuthorComponent v-for="author in authors"
-            :key="author.id"
-          >
-          <span>
-            <a :href="author.uri">
-              {{author.firstname}} {{author.lastname}}
-            </a>
-          </span>
-          </AuthorComponent>
-      </div>-->
-      </div>
+  <div class="book">
+    <div class="title">
+      <router-link :to="{name: 'book-details', params: {id: id}}">{{title}}</router-link>
     </div>
+    <div v-if="front" class="book-front">
+        <img class="front" src="{{front}}" alt="front" />
+    </div>
+    <div class="rating">Rating: {{rating}} / 5</div>
+  </div>
 </template>
 
 <script>
@@ -58,24 +44,25 @@ export default {
     id: {
         type: Number,
         required: true
+    },
+    front: {
+        type: String,
+        default: ''
     }
-
   }
 }
 </script>
 
 <style lang="css" scoped>
 .title {
-  margin: 10px;
-  font-weight: 700;
+    margin: 10px;
+    font-weight: 700;
 }
 .book {
-  border: 1px solid #000;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-.h4c {
-  margin-top: 5px;
-  margin-bottom: 0;
+    border: 1px solid #d6d6d6;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 200px;
+    margin-left: 10px;
 }
 </style>
