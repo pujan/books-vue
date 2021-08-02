@@ -1,10 +1,12 @@
 <template>
-    <h1>Authors</h1>
-    <AuthorComponent v-for="author in authors" :key="author.id">
-      <div class="author">
-        <router-link :to="{name: 'author-details', params: {id: author.id}}">{{author.firstname}} {{author.lastname}}</router-link>
-      </div>
-    </AuthorComponent>
+    <h1 class="space-left">Authors</h1>
+    <div class="authors">
+        <AuthorComponent v-for="author in authors" :key="author.id">
+            <div class="author">
+                <router-link :to="{name: 'author-details', params: {id: author.id}}">{{author.firstname}} {{author.lastname}}</router-link>
+            </div>
+        </AuthorComponent>
+    </div>
 </template>
 
 <script>
@@ -26,8 +28,19 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.authors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align-last: center;
+    align-content: space-evenly;
+    flex-direction: row;
+}
 .author {
-  margin-bottom: 5px;
-  padding: 2px;
+    border: 1px solid #d6d6d6;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 200px;
+    margin-left: 10px;
 }
 </style>

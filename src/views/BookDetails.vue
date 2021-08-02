@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>Book Details</h1>
+        <h1 class="space-left">Book Details</h1>
         <BookDetailsComponent :id="id" />
     </div>
 </template>

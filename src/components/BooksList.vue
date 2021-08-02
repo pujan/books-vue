@@ -1,16 +1,18 @@
 <template>
-    <h1>Books</h1>
-    <BookComponent
-      v-for="book in books"
-      :key="book.isbn"
-      :title="book.title"
-      :isbn="book.isbn"
-      :pages="book.pages"
-      :rating="book.rating"
-      :url="book.uri"
-      :authors="book.authors"
-      :id="book.id"
-    />
+    <h1 class="space-left">Books</h1>
+    <div class="books">
+        <BookComponent
+          v-for="book in books"
+          :key="book.isbn"
+          :title="book.title"
+          :isbn="book.isbn"
+          :pages="book.pages"
+          :rating="book.rating"
+          :url="book.uri"
+          :authors="book.authors"
+          :id="book.id"
+        />
+    </div>
 </template>
 
 <script>
@@ -32,4 +34,12 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align-last: center;
+    align-content: space-evenly;
+    flex-direction: row;
+}
 </style>

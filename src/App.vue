@@ -21,14 +21,17 @@
 <style lang="css">
 .main-menu {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 330px;
+}
+.menu-item:first-child {
+    margin-left: 0;
 }
 .menu-item {
     width: 100px;
     height: 100px;
     border: 1px solid #000;
+    margin-left: 23px;
 }
 .menu-item a {
     display: block;
@@ -54,5 +57,12 @@ a {
 }
 a:hover {
     color: red;
+}
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
+.space-left {
+    margin-left: 32px;
 }
 </style>
