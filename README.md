@@ -26,3 +26,6 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+[![GitHub license](https://img.shields.io/github/license/pujan/books-vue)](https://github.com/pujan/books-vue/blob/main/LICENSE)
