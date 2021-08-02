@@ -1,5 +1,8 @@
-# books
-Frontend in Vue
+# books-vue
+
+Frontend in Vue. It's my first project in Vue.
+
+Related project [books-api](https://github.com/pujan/books-api/).
 
 ## Project setup
 ```
