@@ -1,7 +1,7 @@
 <template>
   <div class="book">
     <div class="title">
-      <router-link :to="{name: 'book-details', params: {id: id}}">{{title}}</router-link>
+      <router-link :to="uri">{{title}}</router-link>
     </div>
     <div v-if="front" class="book-front">
         <img class="front" src="{{front}}" alt="front" />
@@ -48,6 +48,10 @@ export default {
     front: {
         type: String,
         default: ''
+    },
+    uri: {
+        type: String,
+        required: true
     }
   }
 }

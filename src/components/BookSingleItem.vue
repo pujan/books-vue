@@ -3,11 +3,11 @@
         <div v-if="details.front" class="book-front">
             <img class="front" src="{{details.front}}" alt="front" />
         </div>
-        <p>Title: {{details.title}}</p>
-        <p>Pages: {{details.pages}}</p>
-        <p>Rating: {{details.rating}}</p>
-        <p>ISBN: {{details.isbn}}</p>
-        <p>Publisher: <a :href="details.publisher.url">{{details.publisher.name}}</a></p>
+        <p><span class="bold">Title:</span> {{details.title}}</p>
+        <p><span class="bold">Pages:</span> {{details.pages}}</p>
+        <p><span class="bold">Rating:</span> {{details.rating}}</p>
+        <p><span class="bold">ISBN:</span> {{details.isbn}}</p>
+        <p><span class="bold">Publisher:</span> <a :href="details.publisher.url" target="_blank">{{details.publisher.name}}</a></p>
         <div class="authors">
             <h4 class="h4c">Authors:</h4>
             <ul class="author-menu">
@@ -35,8 +35,10 @@ export default {
         AuthorComponent
     },
     props: {
-        id: String,
-        // required: true
+        id: {
+            type: String,
+            required: true
+        }
     },
     async setup(props) {
         const details = ref(null);
@@ -61,5 +63,8 @@ ul.author-menu li {
 .h4c {
     margin-top: 5px;
     margin-bottom: 0;
+}
+.bold {
+    font-weight: 600;
 }
 </style>

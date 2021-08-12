@@ -19,7 +19,7 @@ const routes = [
         // component: () => import(/* webpackChunkName: "books" */ '../views/Books.vue')
     },
     {
-        path: '/books/:id',
+        path: '/books/:id/:slug',
         name: 'book-details',
         props: true,
         component: BookDetails
@@ -31,7 +31,7 @@ const routes = [
         // component: () => import(/* webpackChunkName: "about" */ '../views/Authors.vue')
     },
     {
-        path: '/authors/:id',
+        path: '/authors/:id/:slug',
         name: 'author-details',
         props: true,
         component: AuthorDetails

@@ -5,10 +5,10 @@
                 <div v-if="details.photo" class="author-photo">
                     <img class="photo" src="{{details.photo}}" alt="photo" />
                 </div>
-                <p>First name: {{details.firstname}}</p>
-                <p>Last name: {{details.lastname}}</p>
-                <p>Biography: {{details.biography}}</p>
-                <p>Number books in database: {{details.number_books}}</p>
+                <p><span class="bold">First name:</span> {{details.firstname}}</p>
+                <p><span class="bold">Last name:</span> {{details.lastname}}</p>
+                <p><span class="bold">Biography:</span><br/>{{details.biography}}</p>
+                <p><span class="info">Number books in database:</span> {{details.number_books}}</p>
             </span>
         </AuthorComponent>
     </div>
@@ -41,4 +41,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.bold {
+    font-weight: 600;
+}
+.info {
+    font-style: italic;
+}
 </style>

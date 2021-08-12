@@ -11,6 +11,7 @@
           :url="book.uri"
           :authors="book.authors"
           :id="book.id"
+          :uri="book.uri"
         />
     </div>
 </template>

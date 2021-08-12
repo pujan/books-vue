@@ -18,6 +18,10 @@ export default {
         id: {
             type: String,
             required: true
+        },
+        slug: {
+            type: String,
+            required: true
         }
     },
     setup() {
