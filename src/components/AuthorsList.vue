@@ -42,5 +42,6 @@ export default {
     padding: 10px;
     width: 200px;
     margin-left: 10px;
+    text-align: center;
 }
 </style>

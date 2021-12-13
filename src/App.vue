@@ -19,10 +19,14 @@
 </template>
 
 <style lang="css">
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
 .main-menu {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #515354;
 }
 .menu-item:first-child {
     margin-left: 0;
@@ -38,10 +42,11 @@
     width: 100%;
     height: 100%;
     text-align: center;
+    font-size: 20px;
 }
 .menu-item a:hover {
     background-color: #eaeafd;
-    color: #63b6ff;
+    color: #515354;
 }
 .menu-item a > span {
     display: inline-block;
@@ -53,14 +58,14 @@
 }
 a {
     text-decoration: none;
-    color: #63b6ff;
+    /* color: #63b6ff; */
 }
 a:hover {
     color: red;
 }
 .container {
     margin: 0 auto;
-    width: 960px;
+    max-width: 960px;
 }
 .space-left {
     margin-left: 32px;

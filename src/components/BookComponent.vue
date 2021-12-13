@@ -61,6 +61,7 @@ export default {
 .title {
     margin: 10px;
     font-weight: 700;
+    text-align: center;
 }
 .book {
     border: 1px solid #d6d6d6;
