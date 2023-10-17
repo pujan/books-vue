@@ -10,7 +10,7 @@
   "dependencies": {
     "core-js": "^3.26.1",
     "glob-parent": "^6.0.2",
-    "postcss": "^7.0.39",
+    "postcss": "^8.4.31",
     "tar": "^6.1.12",
     "trim-newlines": "^3.0.1",
     "vue": "^3.0.0",
