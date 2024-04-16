@@ -11,7 +11,7 @@
     "core-js": "^3.26.1",
     "glob-parent": "^6.0.2",
     "postcss": "^8.4.31",
-    "tar": "^6.1.12",
+    "tar": "^6.2.1",
     "trim-newlines": "^3.0.1",
     "vue": "^3.0.0",
     "vue-router": "^4.1.6",
