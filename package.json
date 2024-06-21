@@ -16,7 +16,7 @@
     "vue": "^3.0.0",
     "vue-router": "^4.1.6",
     "webpack": "^4.46.0",
-    "ws": "^6.2.2"
+    "ws": "^6.2.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.8",
